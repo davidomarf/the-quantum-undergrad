@@ -1,245 +1,187 @@
-# [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/)
+# [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
 
-[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE.txt)
-[![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.6-blue.svg)](https://jekyllrb.com/)
-[![Ruby gem](https://img.shields.io/gem/v/minimal-mistakes-jekyll.svg)](https://rubygems.org/gems/minimal-mistakes-jekyll)
-[![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/mmistakes)
+[![Gem Version](https://img.shields.io/gem/v/jekyll-text-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/releases)
+[![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
+[![Travis](https://img.shields.io/travis/kitian616/jekyll-TeXt-theme.svg)](https://travis-ci.org/kitian616/jekyll-TeXt-theme)
 
-Minimal Mistakes is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
+![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png)
 
-:sparkles: See what's new in the [CHANGELOG](CHANGELOG.md).
+![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png)
 
-[![Minimal Mistakes live preview][2]][1]
+[Demo](https://tianqi.name/jekyll-TeXt-theme/) | [English](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-en.md)
 
-[1]: https://mmistakes.github.io/minimal-mistakes/
-[2]: screenshot.png (live preview)
+TeXt is a succinct theme for blogging.
 
-![layout examples](screenshot-layouts.png)
+TeXt 是针对博客的一款简洁的主题，它虽然简洁但并不简单。它参考了 iOS 11 的风格，有大而突出的标题和圆润的按钮及卡片。
 
-## Notable Features
+## Features
 
-- Bundled as a "theme gem" for easier install/upgrading.
-- Compatible with GitHub Pages.
-- Support for Jekyll's built-in Sass/SCSS preprocessor.
-- Nine different skins (color variations).
-- Several responsive layout options (single, archive index, search, splash, and paginated home page).
-- Optimized for search engines with support for [Twitter Cards](https://dev.twitter.com/cards/overview) and [Open Graph](http://ogp.me/) data
-- Optional [header images](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#headers), [custom sidebars](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#sidebars), [table of contents](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#table-of-contents), [galleries](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#gallery), related posts, [breadcrumb links](https://mmistakes.github.io/minimal-mistakes/docs/configuration/#breadcrumb-navigation-beta), [navigation lists](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#navigation-list), and more.
-- Commenting support (powered by [Disqus](https://disqus.com/), [Facebook](https://developers.facebook.com/docs/plugins/comments), Google+, [Discourse](https://www.discourse.org/), static-based via [Staticman v1 and v2](https://staticman.net/), and custom).
-- [Google Analytics](https://www.google.com/analytics/) support.
-- UI localized text in English (default), Brazilian Portuguese (Português brasileiro), Chinese, Danish, Dutch, French (Français), German (Deutsch), Greek, Indonesian, Italian (Italiano), Japanese, Korean, Nepali (Nepalese), Polish, Russian, Slovak, Spanish (Español), Swedish, Turkish (Türkçe), and Vietnamese.
+- 响应式
+- 分页（[jekyll-paginate](https://github.com/jekyll/jekyll-paginate)）
+- 文章目录
+- 文章标签
+- 搜索（标题）
+- 阅读次数统计（[LeanCloud](https://leancloud.cn/)）
+- Emoji（[Jemoji](https://github.com/jekyll/jemoji)）
+- 评论（[Disqus](https://disqus.com/), [gitalk](https://gitalk.github.io/)）
+- Google Analytics
+- 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
+- Web 语意化
+- 网站图标的自动化工具（[gulp-svg2png](https://www.npmjs.com/package/gulp-svg2png), [gulp-to-ico](https://www.npmjs.com/package/gulp-to-ico)）
+- Color Theme
+- 数学公式（[MathJax](https://www.mathjax.org/)）
+- 流程图， 序列图，甘特图（[mermaid](https://mermaidjs.github.io/)）
+- 柱状图，折线图，饼图，雷达图（[chartjs](http://www.chartjs.org/)）
+- RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
+- 多语言支持（English | 简体中文 | 繁體中文）
 
-## Skins (Color Variations)
+下面简要的介绍下使用的方法，当然如果你对 Jekyll 比较了解可以直接看后面的高级部分，这是该主题增加的一些特有功能。
 
-This theme comes in nine different skins (including the default one).
+## How To Use
 
-| `air` | `contrast` | `dark` |
-| --- | --- | --- |
-| ![air skin](https://mmistakes.github.io/minimal-mistakes/assets/images/air-skin-archive.png) | ![contrast skin](https://mmistakes.github.io/minimal-mistakes/assets/images/contrast-skin-archive.png) | ![dark skin](https://mmistakes.github.io/minimal-mistakes/assets/images/dark-skin-archive.png) |
+最简单的方法是直接 **Fork** 到你的 GitHub 仓库然后更改其名称为 `<username>.github.io`，稍等一会儿访问 `https://<username>.github.io` 即可看到一个空的博客页，接下来你可以把它 Clone 到本地修改后提交。
 
-| `dirt` | `mint` | `sunrise` |
-| --- | --- | --- |
-| ![dirt skin](https://mmistakes.github.io/minimal-mistakes/assets/images/dirt-skin-archive.png) | ![mint skin](https://mmistakes.github.io/minimal-mistakes/assets/images/mint-skin-archive.png) | ![sunrise skin](https://mmistakes.github.io/minimal-mistakes/assets/images/sunrise-skin-archive.png) |
+当然你也可以在 [Releases 页面](https://github.com/kitian616/jekyll-TeXt-theme/releases) 下载最新版本源码，或直接 Clone 代码到本地。
 
-| `aqua` | `neon` | `plum` |
-| --- | --- | --- |
-| ![aqua skin](https://mmistakes.github.io/minimal-mistakes/assets/images/aqua-skin-archive.png) | ![neon skin](https://mmistakes.github.io/minimal-mistakes/assets/images/neon-skin-archive.png) | ![plum skin](https://mmistakes.github.io/minimal-mistakes/assets/images/plum-skin-archive.png) |
+另外，因为每个版本都是作为一个 [Gem](https://rubygems.org/gems/jekyll-text-theme) 发布的，所以你也可以通过 Jekyll 的主题系统安装该主题，这种方式可以很方便的升级保持最新，但不支持 GitHub 的自动编译，详见 [Jekyll: 主题](http://jekyllcn.com/docs/themes/)。项目的 ./test 目录就是一个使用主题系统的例子。
 
-## Demo Pages
+### 配置
 
-| Name                                        | Description                                           |
-| ------------------------------------------- | ----------------------------------------------------- |
-| [Post with Header Image][header-image-post] | A post with a large header image. |
-| [HTML Tags and Formatting Post][html-tags-post] | A variety of common markup showing how the theme styles them. |
-| [Syntax Highlighting Post][syntax-post] | Post displaying highlighted code. |
-| [Post with a Gallery][gallery-post] | A post showing several images wrapped in `<figure>` elements. |
-| [Sample Collection Page][sample-collection] | Single page from a collection. |
-| [Categories Archive][categories-archive] | Posts grouped by category. |
-| [Tags Archive][tags-archive] | Posts grouped by tag. |
+在 ./\_config.yml 文件里按照说明加上你的信息，例如你的名字和联系方式，网站的标题和描述等等。
 
-Additional sample posts are available under [posts archive][year-archive] on the demo site. Source files for these (and the entire demo site) can be found in [`/docs`](docs).
+在 ./about.md 中写上你的简单介绍，例如我叫小明之类的。
 
-[header-image-post]: https://mmistakes.github.io/minimal-mistakes/layout-header-image-text-readability/
-[gallery-post]: https://mmistakes.github.io/minimal-mistakes/post%20formats/post-gallery/
-[html-tags-post]: https://mmistakes.github.io/minimal-mistakes/markup/markup-html-tags-and-formatting/
-[syntax-post]: https://mmistakes.github.io/minimal-mistakes/markup-syntax-highlighting/
-[sample-collection]: https://mmistakes.github.io/minimal-mistakes/recipes/chocolate-chip-cookies/
-[categories-archive]: https://mmistakes.github.io/minimal-mistakes/categories/
-[tags-archive]: https://mmistakes.github.io/minimal-mistakes/tags/
-[year-archive]: https://mmistakes.github.io/minimal-mistakes/year-archive/
+### 写博客
 
-## Installation
+使用 Markdown 编写文章，位于 ./\_posts 目录（需要自行创建）下，文件名采用日期 + 标题的形式，形如 `2017-02-02-Very-Long-Title`，可参考 ./test/\_posts 目录。
 
-There are three ways to install the theme: as a Ruby gem (for self-hosted sites), as a Ruby gem + jekyll-remote-theme plugin (GitHub Pages hosted sites), or forking/directly copying all of the theme files into your project.
+可以在头信息里设置文章的一些基本信息，包括标题、发布时间和标签等。当然，如果你不设置标题和发布时间，系统会使用文件名中的标题和发布时间，详见 [Jekyll: 头信息](http://jekyllcn.com/docs/frontmatter/)。当然，该主题在原有的基础上增加了一些属性，这在后面会讲到。
 
-### Ruby Gem Method
+#### 摘要
 
-1. Install the theme as a Ruby Gem by adding it to your `Gemfile` like so:
+该主题的摘要有两种模式——TEXT 模式和 HTML 模式。 当 ./\_config.yml 配置项 `excerpt_type` 的值为 `text` 时是 TEXT 模式，为 `html` 时是 HTML 模式，**默认为 TEXT 模式**。
 
-   ```ruby
-   gem "minimal-mistakes-jekyll"
-   ```
+TEXT 模式的摘要为纯文本，会过滤掉一切非文本元素（标题，链接，列表，表格，图片等等），且截取前 350 个字符。
 
-2. Fetch and update bundled gems by running the following [Bundler](http://bundler.io/) command:
+HTML 模式的摘要为 HTML 文档，与文章内容一致，并且 **默认展示整篇文章的内容**。若想控制摘要内容，需要在文章中想要显示到的地方加上 `<!--more-->`，详见 [Jekyll: 文章摘要](http://jekyll.com.cn/docs/posts/#_6)。
 
-   ```bash
-   bundle
-   ```
+> 提示：为了首页更好的展示效果，个人还是推荐使用 HTML 模式，并自己在文章中加上 `<!--more-->`。
 
-3. Set the `theme` in your project's Jekyll `_config.yml` file:
+### 安装环境（非必须）
 
-   ```yaml
-   theme: minimal-mistakes-jekyll
-   ```
+具体可参考 [Jekyll: 安装](http://jekyllcn.com/docs/installation/)。
 
-To update the theme run `bundle update`.
+请确保你的电脑上配置好了 Ruby 开发环境。(ruby, bundle, Command Line Tools(macOS) ...)
 
-### GitHub Pages Method
+首先安装 github-pages（包含了 Jekyll 以及一些插件），在项目根目录执行 `bundle install` 即可安装。
 
-1. Create/replace the contents of your `Gemfile` with the following:
+推荐安装 Node.js 环境，可以获得更好的开发体验。
 
-   ```ruby
-   source "https://rubygems.org"
+### 本地服务（非必须）
 
-   gem "github-pages", group: :jekyll_plugins
-   ```
+如果你安装了 Node.js 环境，只需要在项目根目录运行 `npm run dev` 即可启动本地服务。
 
-2. Fetch and update bundled gems by running the following [Bundler](http://bundler.io/) command:
+如果没有安装 Node.js 环境，则是：
 
-   ```bash
-   bundle
-   ```
+```console
+bundle exec jekyll serve -H 0.0.0.0
+```
 
-3. Add `remote_theme: "mmistakes/minimal-mistakes"` to your `_config.yml` file. Remove any other `theme:` or `remote_theme:` entry.
+命令执行成功后在浏览器中访问 [http://localhost:4000/](http://localhost:4000/) 即可看到页面。
 
-## Usage
+### 部署与提交
 
-For detailed instructions on how to configure, customize, add/migrate content, and more read the [theme's documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
+推荐部署到 GitHub Pages 上，简单而免费，详见 [Jekyll: GitHub Pages](http://jekyllcn.com/docs/github-pages/)。
 
----
+如果你是下载或者 Clone 的源码，那么你需要在 GitHub 上建立一个 Repository，然后把项目代码 push 到其对应的分支上（如果以 `<username>.github.io` 命名则对应分支为 `master` ，其他的为 `gh-pages`，详见 [Github Pages: Configuring a publishing source for GitHub Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)）。
 
-## Contributing
+如果你是通过 Jekyll 的主题系统安装的，那么你需要把本地编译好的代码 push 到上文所说的对应分支上。
 
-Having trouble working with the theme? Found a typo in the documentation? Interested in adding a feature or [fixing a bug](https://github.com/mmistakes/minimal-mistakes/issues)? Then by all means [submit an issue](https://github.com/mmistakes/minimal-mistakes/issues/new) or [pull request](https://help.github.com/articles/using-pull-requests/). If this is your first pull request, it may be helpful to read up on the [GitHub Flow](https://guides.github.com/introduction/flow/) first.
+当然你也可以部署到到其他地方。
 
-Minimal Mistakes has been designed as a base for you to customize and fit your site's unique needs. Please keep this in mind when requesting features and/or submitting pull requests. If it's not something that most people will use, I probably won't consider it. When in doubt ask. 
+## 高级
 
-This goes for author sidebar links and "share button" additions -- I have no intention of merging in every possibly option, the essentials are there to get you started :smile:.
+### 多语言
 
-### Pull Requests
+该主题支持 English、简体中文和繁體中文，只需在 ./\_config.yml 中设置对应 `lang` 项即可。设置后整个网站的主题文字（导航，阅读更多，文章数统计，日期格式，文章协议等等）会变为设置的语言，多语言的配置文件为 ./_data/locale.yml，你可以自由的修改和增加语言。
 
-When submitting a pull request:
+另外，该主题也支持对某篇文章（页面）单独设置语言，只需在 Markdown 或页面 HTML 文件的头信息中设置 `lang` 项，其优先级高于 ./\_config.yml 中设置的值。设置后该文章（页面）的主题文字会变为头信息中设置的语言。
 
-1. Clone the repo.
-2. Create a branch off of `master` and give it a meaningful name (e.g. `my-awesome-new-feature`).
-3. Open a pull request on GitHub and describe the feature or fix.
+> 提示：当前的 `lang` 值可选值为 en(English), zh(简体中文), zh-Hans(简体中文), zh-Hant(繁體中文)。
 
-Theme documentation and demo pages can be found in the [`/docs`](docs) if submitting improvements, typo corrections, etc.
+### Color Theme
 
-## Development
+颜色主题位于文件夹 ./\_sass/colors 中，修改 ./\_config.yml 中的 text_color_theme 项为以下值即可更换颜色主题，默认主题为 default。
 
-To set up your environment to develop this theme, run `bundle install`.
+| `default` | `dark` | `forest` |
+| --- |  --- | --- |
+| ![default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_default.png) | ![dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_dark.png) | ![forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_forest.png) |
 
-To test the theme, run `bundle exec rake preview` and open your browser at `http://localhost:4000/test/`. This starts a Jekyll server using content in the `test/` directory. As modifications are made to the theme and test site, it will regenerate and you should see the changes in the browser after a refresh.
+| `ocean` | `chocolate` | `orange` |
+| --- |  --- | --- |
+| ![ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_ocean.png) | ![chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_chocolate.png) | ![orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/colors_orange.png) |
 
----
+更多颜色主题敬请期待。
 
-## Credits
+### 网站图标
 
-### Creator
+该主题自带了一个“银杏叶”图标，你可以把它替换为自己的图标。网站的图标位于 ./favicon.ico 和 ./assets/images/logo 目录下。你会看到 logo 目录中有很多的 png 文件和一个 svg 矢量图文件。那些 png 图片实际上就是根据 svg 矢量图生成的不同大小的图片，这些图片是一些场景可能会用到的大图标，像 iOS 和 Android 的固定到屏幕和 Windows 10 的磁贴。
 
-**Michael Rose**
+该主题提供了一个自动化脚本能将 svg 矢量图自动生成 favicon 和 png 文件。你所要做的是：
 
-- <https://mademistakes.com>
-- <https://twitter.com/mmistakes>
-- <https://github.com/mmistakes>
+1. 安装 Node.js 环境
 
-### Icons + Demo Images:
+2. 在项目根目录执行 `npm i` 命令
 
-- [The Noun Project](https://thenounproject.com) -- Garrett Knoll, Arthur Shlain, and [tracy tam](https://thenounproject.com/tracytam)
-- [Font Awesome](http://fontawesome.io/)
-- [Unsplash](https://unsplash.com/)
+3. 替换 ./assets/images/logo 目录下的 logo.svg 文件
 
-### Other:
+4. 执行 `npm run artwork` 命令，此时 favicon 和 png 便会替换为新 logo.svg 生成的文件
 
-- [Jekyll](http://jekyllrb.com/)
-- [jQuery](http://jquery.com/)
-- [Susy](http://susy.oddbird.net/)
-- [Breakpoint](http://breakpoint-sass.com/)
-- [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
-- [FitVids.JS](http://fitvidsjs.com/)
-- [GreedyNav.js](https://github.com/lukejacksonn/GreedyNav)
-- [jQuery Smooth Scroll](https://github.com/kswedberg/jquery-smooth-scroll)
-- [Lunr](http://lunrjs.com)
+当然如果要追求各个尺寸下图标的显示效果，那还得对不同尺寸的图片进行修改和优化。
 
----
+### 评论系统
 
-## License
+目前支持 Disqus 和 gitalk 评论系统，优先使用 Disqus。
 
-The MIT License (MIT)
+#### Disqus
 
-Copyright (c) 2013-2018 Michael Rose and contributors
+在 ./\_config.yml 文件的 `disqus.shortname` 项填上你在 [Disqus](https://disqus.com/) 上为网站建立的 site 对应的 shortname 即可，需要注意的是 Disqus 在大陆是无法直接访问的。
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+#### gitalk
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+在 ./\_config.yml 文件的 `gitalk` 的子项（`clientID`,`clientSecret`, `repository`, `owner`, `admin`）填上 gitalk 的对应参数 即可，详见 [gitalk 中文文档](https://github.com/gitalk/gitalk/blob/master/readme-cn.md)。
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+> 注意：使用评论系统必须在文章的头信息中设置 key 值（可用字符集：`字母`、`数字` 及 `- _ : .`）。
 
-Minimal Mistakes incorporates icons from [The Noun Project](https://thenounproject.com/) 
-creators Garrett Knoll, Arthur Shlain, and tracy tam.
-Icons are distributed under Creative Commons Attribution 3.0 United States (CC BY 3.0 US).
+### 阅读量统计
 
-Minimal Mistakes incorporates [Font Awesome](http://fontawesome.io/),
-Copyright (c) 2017 Dave Gandy.
-Font Awesome is distributed under the terms of the [SIL OFL 1.1](http://scripts.sil.org/OFL) 
-and [MIT License](http://opensource.org/licenses/MIT).
+在 ./\_config.yml 文件 `leancloud` 的 `app_id`、`app_key`、`app_class` 项分别填上你在 [LeanCloud](https://leancloud.cn) 为网站建立的应用的对应参数。
 
-Minimal Mistakes incorporates photographs from [Unsplash](https://unsplash.com).
+> 注意：使用阅读量统计必须在文章的头信息中设置 key 值（可用字符集：`字母`、`数字` 及 `- _ : .`）。
 
-Minimal Mistakes incorporates [Susy](http://susy.oddbird.net/),
-Copyright (c) 2017, Miriam Eric Suzanne.
-Susy is distributed under the terms of the [BSD 3-clause "New" or "Revised" License](https://opensource.org/licenses/BSD-3-Clause).
+### Google Analytics
 
-Minimal Mistakes incorporates [Breakpoint](http://breakpoint-sass.com/).
-Breakpoint is distributed under the terms of the [MIT/GPL Licenses](http://opensource.org/licenses/MIT).
+在 ./\_config.yml 文件的 `ga_tracking_id` 项填上你在 [Google Analytics](https://analytics.google.com) 上为网站建立的媒体资源对应的跟踪 ID。
 
-Minimal Mistakes incorporates [FitVids.js](https://github.com/davatron5000/FitVids.js/),
-Copyright (c) 2013 Dave Rubert and Chris Coyier.
-FitVids is distributed under the terms of the [WTFPL License](http://sam.zoy.org/wtfpl/).
+### Markdown 头信息增强
 
-Minimal Mistakes incorporates [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/),
-Copyright (c) 2014-2016 Dmitry Semenov, http://dimsemenov.com.
-Magnific Popup is distributed under the terms of the MIT License.
+除了 Jekyll 官方的头信息外，该主题增加了一些头信息。
 
-Minimal Mistakes incorporates [jQuery Smooth Scroll](https://github.com/kswedberg/jquery-smooth-scroll),
-Copyright (c) 2017 Karl Swedberg.
-jQuery Smooth Scroll is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+| 变量名称       | 可选值          | 描述 |
+| ---           | ---           | --- |
+| key           |               | 评论系统和阅读量统计使用的文章标识符，如果未设置则评论和统计无效。可用字符集：`字母`、`数字` 及 `- _ : .` |
+| lang          | en/zh/zh-Hans/zh-Hant | 该文章的语言，其优先级高于  ./\_config.yml 中设置的值 |
+| modify_date   |               | 该文章的修改时间，不影响首页文章排序（`date` 代表发表时间，会影响文章排序） |
+| comment       | true/false    | 该文章是否能够评论，默认为 true（当然你也可以通过不设置 key 来实现，但是这样的话统计也失效了） |
+| mathjax       | true/false    | 该文章是否需要使用 MathJax 公式，默认为 false（此时只会在该文章页面中解析 MathJax 公式。当然你也可以配置 _config.yml 中的 `mathjax` 项为 true，让网站全局支持 MathJax 公式） |
+| mermaid       | true/false    | 该文章是否需要使用 Mermaid 绘制流程图 |
+| chart         | true/false    | 该文章是否需要使用 Chart 绘制图标 |
 
-Minimal Mistakes incorporates [GreedyNav.js](https://github.com/lukejacksonn/GreedyNav),
-Copyright (c) 2015 Luke Jackson.
-GreedyNav.js is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+### 其他资源
 
-Minimal Mistakes incorporates [Jekyll Group-By-Array](https://github.com/mushishi78/jekyll-group-by-array),
-Copyright (c) 2015 Max White <mushishi78@gmail.com>.
-Jekyll Group-By-Array is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+在 ./\_includes/icon/social 目录下有很多的社交产品图标，例如 Behance、Flickr、QQ、微信等，方便修改和使用。
 
-Minimal Mistakes incorporates [@allejo's Pure Liquid Jekyll Table of Contents](https://allejo.io/blog/a-jekyll-toc-in-liquid-only/),
-Copyright (c) 2017 Vladimir Jimenez.
-Pure Liquid Jekyll Table of Contents is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+## 示例
 
-Minimal Mistakes incorporates [Lunr](http://lunrjs.com),
-Copyright (c) 2017 Oliver Nightingale.
-Lunr is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+- [Demo](https://tianqi.name/jekyll-TeXt-theme/)
+- [Qi's blog](https://tianqi.name/blog/)
