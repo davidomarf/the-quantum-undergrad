@@ -46,7 +46,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: someone/someone.github.io
+repository: davidomarf/the-quantum-undergrad
 repository_tree: master
 
 
@@ -55,16 +55,13 @@ repository_tree: master
 paths:
   base: /
   home: /
-  all:  /all.html
-  rss:  /feed.xml
+  all:  /all
+  rss:  /feed
 
 nav_lists:
   - titles:
       en: About
-      zh: 关于
-      zh-Hans: 关于
-      zh-Hant: 關於
-    url: /about.html
+    url: /about
 
 
 ## => Post
@@ -137,7 +134,7 @@ ga_tracking_id: # Google Analytics id for the site
 ##############################
 markdown: kramdown
 highlighter: rouge
-permalink: date
+permalink: /:categories/:title
 
 exclude:
   - CHANGELOG.md
